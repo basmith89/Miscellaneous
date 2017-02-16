@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpForm
 				
 				 This script was made to modify prokka output 
 				 for usage with Traitar.  An identifer of choice
-				 is added to each identifer line as requiered by Traitar format'''))
+				 is added to each identifer line as required by Traitar format'''))
 parser.add_argument("-i", "--input", required = True,
 		   help = "FASTA Amino Acids file required")
 parser.add_argument("-a", "--add_id", required = True,
