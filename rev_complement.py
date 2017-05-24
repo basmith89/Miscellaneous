@@ -19,14 +19,12 @@ args = parser.parse_args()
 
 file = open(args.input, 'r')
 out_file = open(args.output, 'w')
-#with open(args.input, 'r+') as file:
 
 
 with open(args.input, 'r') as f:
     for line in f:
         read_data = line
 
-#with open(args.input, 'w') as f:
     for line in file.readlines():
         if line.startswith(">"):
             out_file.write(line)
@@ -36,9 +34,10 @@ with open(args.input, 'r') as f:
 
 def complement(seq):
     #Reverse and complement DNA strand
-    basecomplement = {'A': 'T', 'C': 'G', 'T': 'A', 'G': 'C'}
+    basecomplement = {'A': 'T', 'C': 'G', 'T': 'A', 'G': 'C',}
     bases = list(seq) #creates a list of bases from seq stored in bases
-    bases = [basecomplement[base] for base in bases]
+    #get function returns defualt type None.  Base set as default avoids KeyError Non-ACTG nucleotides
+    bases = [basecomplement.get(base, base) for base in bases]
     return ''.join(bases)
 
 #Reverse seq with list slicing method
