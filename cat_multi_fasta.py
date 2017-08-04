@@ -22,7 +22,7 @@ parser.add_argument("-o", "--output", required = True,
 args = parser.parse_args()
 
 in_file = open(args.input, 'r')
-out_file = open(args.output, 'w')
+out_file = open(args.output + ".fa", 'w')
 
 out_file.write(">" + args.output + "\n")
 
