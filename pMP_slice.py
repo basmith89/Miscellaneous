@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 __author__ = 'briansmith'
 
-
+#THIS PROGRAM IS NOW DEPRICATED
 
 import argparse, textwrap
 
