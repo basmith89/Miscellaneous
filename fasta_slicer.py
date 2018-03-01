@@ -67,7 +67,7 @@ if args.range1:
 for line in fh:
     if line.startswith(">") and args.new_lines == True:
         out_file.write(line + "\n")
-    elif line.startswith and args.new_lines == False:
+    elif line.startswith(">") and args.new_lines == False:
         out_file.write(line)
     elif not line.startswith(">"):
         line = line.strip('\n')
